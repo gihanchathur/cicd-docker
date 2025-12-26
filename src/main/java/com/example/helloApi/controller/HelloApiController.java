@@ -10,4 +10,9 @@ public class HelloApiController{
     public String hello(){
         return "hello";
     }
+
+      @GetMapping("/")
+    public String root() {
+        return "Hello from root!";
+    }
 }
