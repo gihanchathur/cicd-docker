@@ -44,8 +44,9 @@ jobs:
 
       # Authenticate Docker to push to GCR
       - name: Configure Docker for GCR
-        run: gcloud auth configure-docker
-
+        run: gcloud auth configure-docker \
+    us-docker.pkg.dev
+    
       # Push Docker image to GCR
       - name: Push Docker image
         run: docker push gcr.io/${{ vars.GCP_PROJECT_ID }}/helloapi:latest
